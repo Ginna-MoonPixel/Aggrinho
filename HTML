@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAgro 360 - Sustentabilidade e Tecnologia no Campo</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+                    <path d="M50,10 A40,40 0 0,0 50,90 Z" fill="#2E7D32"/> <path d="M50,10 A40,40 0 0,1 50,90 Z" fill="#0288D1"/> </svg>
+                <span>EcoAgro 360</span>
+            </div>
+            
+            <nav aria-label="Navegação principal">
+                <button class="menu-hamburguer" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="barra"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-item active" data-target="inicio">Início</a></li>
+                    <li><a href="#" class="nav-item" data-target="sustentabilidade">Sustentabilidade</a></li>
+                    <li><a href="#" class="nav-item" data-target="tecnologia">Tecnologia</a></li>
+                    <li><a href="#" class="nav-item" data-target="simulador">Simulador</a></li>
+                    <li><a href="#" class="nav-item" data-target="quiz">Quiz</a></li>
+                </ul>
+            </nav>
+
+            <button id="btn-tema" aria-label="Alternar modo claro e escuro">🌓</button>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <section id="inicio" class="aba-conteudo active">
+            <div class="hero">
+                <h1>Produzir mais, preservar melhor.</h1>
+                <p>O EcoAgro 360 demonstra como a tecnologia pode fortalecer o agronegócio e, ao mesmo tempo, preservar os recursos naturais.</p>
+                <div class="hero-botoes">
+                    <button class="btn btn-primario" onclick="navegarPara('sustentabilidade')">Conhecer o Projeto</button>
+                    <button class="btn btn-tecnologia" onclick="navegarPara('simulador')">Simular Impactos</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulador" class="aba-conteudo">
+            <h2>Simulador de Impacto EcoAgro</h2>
+            <p>Descubra a economia gerada ao adotar a agricultura de precisão.</p>
+            
+            <form id="form-simulador" onsubmit="event.preventDefault();">
+                <div class="grupo-campo">
+                    <label for="hectares">Hectares Cultivados:</label>
+                    <input type="number" id="hectares" min="1" required placeholder="Ex: 50">
+                </div>
+                <div class="grupo-campo">
+                    <label for="agua">Consumo de Água Mensal Estimado (em m³):</label>
+                    <input type="number" id="agua" min="1" required placeholder="Ex: 1000">
+                </div>
+                <button type="button" class="btn btn-primario" id="btn-calcular">Calcular Economia</button>
+            </form>
+
+            <div id="resultado-simulador" class="escondido">
+                <h3>Resultados Estimados da Tecnologia 360:</h3>
+                <p>💧 <strong>Economia de Água:</strong> <span id="res-agua">0</span> m³ por mês.</p>
+                <p>📉 <strong>Redução do Desperdício de Insumos:</strong> <span id="res-insumos">0</span>% devido à precisão.</p>
+                <p>🌿 <strong>Ganho Sustentável:</strong> Solo protegido e maior margem de lucro operacional.</p>
+            </div>
+        </section>
+
+        <section id="quiz" class="aba-conteudo">
+            <h2>Quiz Guardião do Agro Sustentável</h2>
+            <div id="container-quiz">
+                <div class="progresso-container">
+                    <div id="barra-progresso-quiz"></div>
+                </div>
+                <div id="questao-box">
+                    <p id="pergunta-texto">A pergunta aparecerá aqui...</p>
+                    <div id="alternativas-box"></div>
+                </div>
+                <button id="btn-proxima" class="escondido">Próxima Pergunta</button>
+            </div>
+            <div id="resultado-quiz" class="escondido">
+                <h3>Parabéns!</h3>
+                <p>Você acertou <span id="nota-quiz">0</span> de 10 perguntas.</p>
+                <div id="certificado" class="certificado-card">
+                    🏅 Certificado Virtual: Guardião do Agro Sustentável
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoAgro 360 - Projeto Agrinho. Desenvolvido com foco no futuro do campo.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/simulador.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
