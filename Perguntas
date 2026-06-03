@@ -1,0 +1,3 @@
+const perguntas = [
+    { pergunta: "Qual tecnologia reduz o desperdício de água?", alternativas: ["Drones", "Sensores de umidade", "Tratores normais"], correta: 1 }
+];
