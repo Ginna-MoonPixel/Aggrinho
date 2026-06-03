@@ -1,0 +1,48 @@
+/* css/variables.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    /* Paleta de Cores Oficial - Modo Claro */
+    --cor-primaria: #2E7D32;      /* Verde Escuro (Natureza) */
+    --cor-secundaria: #81C784;    /* Verde Claro (Sustentabilidade) */
+    --cor-tecnologia: #0288D1;    /* Azul (Tecnologia/Água) */
+    --cor-producao: #FBC02D;      /* Amarelo (Produção) */
+    --cor-fundo: #FFFFFF;         /* Branco (Organização) */
+    --cor-fundo-alt: #F4F6F4;     /* Cinza claro para contraste */
+    --cor-texto: #212121;
+    
+    /* Tipografia */
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Roboto', sans-serif;
+    
+    /* Transições */
+    --transicao-suave: all 0.3s ease;
+}
+
+/* Variáveis para o Modo Escuro */
+[data-theme="dark"] {
+    --cor-primaria: #1B5E20;
+    --cor-secundaria: #A5D6A7;
+    --cor-tecnologia: #29B6F6;
+    --cor-fundo: #121212;
+    --cor-fundo-alt: #1E1E1E;
+    --cor-texto: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: var(--transicao-suave);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fonte-titulo);
+}
